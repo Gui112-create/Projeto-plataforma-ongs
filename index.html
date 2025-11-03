@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ONG Exemplo — Início</title>
+  <meta name="description" content="ONG Exemplo — missão, projetos e como ajudar.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header role="banner">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588435.png" alt="Logotipo ONG Exemplo">
+        <div>
+          <strong>ONG Exemplo</strong><br><small class="muted">Transformando vidas</small>
+        </div>
+      </div>
+
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=400&fit=crop" alt="Pessoas colaborando em ação social comunitária" class="hero-image">
+      <h1 id="hero-title">Fortalecendo comunidades com ações sociais</h1>
+      <p>Conheça nossos projetos, participe como voluntário e apoie nossas campanhas de impacto.</p>
+    </section>
+
+    <section aria-labelledby="sobre">
+      <h2 id="sobre">Sobre a ONG</h2>
+      <p>A ONG Exemplo atua em educação e assistência social. Nossa missão é promover oportunidades e inclus ão.</p>
+      <div class="grid">
+        <article class="card" aria-labelledby="missao">
+          <h3 id="missao">Missão</h3>
+          <p>Promover inclusão social através de educação e capacitação.</p>
+        </article>
+        <article class="card" aria-labelledby="visao">
+          <h3 id="visao">Visão</h3>
+          <p>Ser referência local em impacto social até 2030.</p>
+        </article>
+        <article class="card" aria-labelledby="valores">
+          <h3 id="valores">Valores</h3>
+          <p>Transparência, respeito e colaboração.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="contato" style="margin-top:1rem">
+      <h2 id="contato">Contato</h2>
+      <p>Email: <a href="mailto:contato@ongexemplo.org">contato@ongexemplo.org</a> — Telefone: (11) 99999-9999</p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>© <span id="ano"></span> ONG Exemplo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* css/styles.css */
+:root{
+  --max-width: 1100px;
+  --accent: #2b7a78;
+  --muted: #6b6b6b;
+}
+
+*{box-sizing: border-box}
+body{
+  font-family: Inter, Arial, sans-serif;
+  margin:0;
+  color:#222;
+  line-height:1.5;
+  background:#f7f7f7;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:1.25rem;
+}
+
+/* header */
+header{
+  background:white;
+  border-bottom:1px solid #eee;
+}
+.header-inner{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{display:flex;align-items:center;gap:.5rem;}
+.logo img{height:48px;width:auto}
+nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--accent);font-weight:600}
+
+/* hero */
+.hero{
+  background:linear-gradient(90deg, rgba(43,122,120,0.06), transparent);
+  padding:2rem 0;
+  border-bottom:1px solid #eee;
+}
+.hero h1{margin:0 0 .5rem;font-size:1.6rem}
+.hero p{margin:0;color:var(--muted)}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.card{background:white;padding:1rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.03)}
+.card h3{margin-top:0}
+
+/* image styles */
+.hero-image{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:1.5rem;
+}
+
+.card-image{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:1rem;
+}
+
+.page-banner{
+  width:100%;
+  max-height:250px;
+  object-fit:cover;
+  border-radius:12px;
+  margin:1rem 0;
+}
+
+/* form styles */
+form fieldset{border:1px solid #e7e7e7;padding:1rem;border-radius:6px;margin-bottom:1rem}
+legend{font-weight:700;padding:0 .3rem}
+.form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.75rem;margin-bottom:.5rem}
+label{display:block;font-size:.9rem;margin-bottom:.25rem}
+input, select, textarea{
+  width:100%;
+  padding:.5rem;
+  border:1px solid #dcdcdc;
+  border-radius:6px;
+  font-size:0.95rem;
+}
+input:invalid{outline:2px solid rgba(255,0,0,0.08)}
+small.helper{color:var(--muted);display:block;margin-top:.25rem}
+
+/* footer */
+footer{background:#fff;padding:1rem;margin-top:2rem;border-top:1px solid #eee;text-align:center;color:var(--muted)}
+
+/* responsive tweaks */
+@media (max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:.5rem}
+}

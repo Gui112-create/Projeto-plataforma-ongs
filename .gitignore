@@ -1,0 +1,24 @@
+# Node / build
+node_modules/
+dist/
+build/
+
+# System
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Arquivos de imagem temporários
+*.tmp
+
+# Binários
+*.exe
+*.dll
+
+# Logs
+*.log
+
+# Outros
+.env
