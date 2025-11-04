@@ -5,28 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cadastre-se como voluntário da ONG Esperança Viva">
     <title>Cadastro de Voluntários - ONG Esperança Viva</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- JavaScript -->
+    <script defer src="js/menu.js"></script>
 </head>
 <body>
     <!-- Cabeçalho principal -->
-    <header>
-    <img src="imagens/logo.jpg" alt="Logo ONG Esperança Viva" width="150">
-        <h1>ONG Esperança Viva</h1>
-        
-        <!-- Navegação principal -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastre-se</a></li>
-                <li><a href="../entrega1/index.html" title="Ver a Entrega I (HTML)">Entrega I (HTML)</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <img src="imagens/logo.jpg" alt="Logo ONG Esperança Viva" class="header__logo">
+                <h1 class="header__title">ONG Esperança Viva</h1>
+                
+                <!-- Botão hambúrguer para mobile -->
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                </button>
+                
+                <!-- Navegação principal -->
+                <nav class="nav" role="navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Início</a></li>
+                        <li class="nav__item"><a href="projetos.html" class="nav__link">Projetos</a></li>
+                        <li class="nav__item"><a href="cadastro.html" class="nav__link nav__link--active">Cadastre-se</a></li>
+                        <li class="nav__item"><a href="../entrega1/index.html" class="nav__link" title="Ver a Entrega I (HTML)">Entrega I (HTML)</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Conteúdo principal -->
-    <main>
-        <h1>Cadastro de Voluntários</h1>
-        <p>Preencha o formulário abaixo para fazer parte da nossa equipe de voluntários e ajudar a transformar vidas!</p>
+    <main class="main">
+        <div class="container">
+            <section class="page-header">
+                <h1 class="page-header__title">Cadastro de Voluntários</h1>
+                <p class="page-header__subtitle">Preencha o formulário abaixo para fazer parte da nossa equipe de voluntários e ajudar a transformar vidas!</p>
+            </section>
 
         <!-- Formulário de cadastro -->
         <form action="#" method="post">
@@ -204,17 +227,22 @@
             <br>
 
             <!-- Botões -->
-            <button type="submit">Enviar Cadastro</button>
-            <button type="reset">Limpar Formulário</button>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+            </div>
         </form>
         <br>
-        <p><small>* Campos obrigatórios</small></p>
+        <p class="form-note"><small>* Campos obrigatórios</small></p>
+        </div>
     </main>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 ONG Esperança Viva. Todos os direitos reservados.</p>
-        <p>CNPJ: 12.345.678/0001-99</p>
+        <div class="container">
+            <p>&copy; 2024 ONG Esperança Viva. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-99</p>
+        </div>
     </footer>
 </body>
 </html>
