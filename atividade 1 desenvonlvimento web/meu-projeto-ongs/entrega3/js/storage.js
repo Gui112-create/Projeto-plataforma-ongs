@@ -116,6 +116,16 @@ class Storage {
     getVolunteerCount() {
         return this.getVolunteers().length;
     }
+
+    removeVolunteer(id) {
+        const list = this.getVolunteers();
+        const next = list.filter(v => Number(v.id) !== Number(id));
+        this.set('volunteers', next);
+    }
+
+    clearVolunteers() {
+        this.set('volunteers', []);
+    }
 }
 
 export const storage = new Storage();

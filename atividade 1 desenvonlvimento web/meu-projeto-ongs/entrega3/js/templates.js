@@ -222,6 +222,45 @@ class Templates {
             </div>
         `;
     }
+
+    voluntarios() {
+        return `
+            <div class="container">
+                <section class="page-header">
+                    <h1 class="page-header__title">Voluntários cadastrados</h1>
+                    <p class="page-header__subtitle">Veja os cadastros salvos no seu navegador (localStorage).</p>
+                </section>
+
+                <section class="volunteers-actions">
+                    <button id="clearVolunteersBtn" class="btn btn-secondary">Limpar todos</button>
+                </section>
+
+                <section class="volunteers-list">
+                    <div id="volunteersEmpty" class="empty-state" style="display:none;">
+                        <p>Não há voluntários cadastrados ainda.</p>
+                        <a href="#cadastro" class="btn">Fazer meu cadastro</a>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="table" aria-describedby="volunteersCaption">
+                            <caption id="volunteersCaption" class="sr-only">Tabela de voluntários cadastrados</caption>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    <th>Telefone</th>
+                                    <th>Área</th>
+                                    <th>Data</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="volunteersBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
 }
 
 export const templates = new Templates();

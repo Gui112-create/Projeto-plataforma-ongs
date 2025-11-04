@@ -10,7 +10,8 @@ class Router {
         this.routes = {
             'home': templates.home,
             'projetos': templates.projetos,
-            'cadastro': templates.cadastro
+            'cadastro': templates.cadastro,
+            'voluntarios': templates.voluntarios
         };
         this.currentRoute = '';
     }
@@ -102,6 +103,13 @@ class Router {
                 // Importação dinâmica para evitar circular dependency
                 import('./formValidator.js').then(module => {
                     module.formValidator.init();
+                });
+            }
+
+            // Se for a página de voluntários, inicializa a view
+            if (page === 'voluntarios') {
+                import('./volunteers.js').then(module => {
+                    module.volunteersView.init();
                 });
             }
             
