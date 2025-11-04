@@ -1,0 +1,267 @@
+/* ============================================
+   layout.css - Sistema de Grid CSS (12 colunas)
+   ============================================ */
+
+/* === CONTAINER === */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-2);
+    padding-right: var(--spacing-2);
+}
+
+.container--narrow {
+    max-width: 800px;
+}
+
+.container--wide {
+    max-width: 1400px;
+}
+
+/* === CSS GRID - 12 COLUNAS === */
+.grid {
+    display: grid;
+    gap: var(--spacing-3);
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--12-cols {
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* Classes para ocupar colunas específicas */
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-7 { grid-column: span 7; }
+.col-span-8 { grid-column: span 8; }
+.col-span-9 { grid-column: span 9; }
+.col-span-10 { grid-column: span 10; }
+.col-span-11 { grid-column: span 11; }
+.col-span-12 { grid-column: span 12; }
+
+/* === HEADER === */
+.header {
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-gray-200);
+    padding: var(--spacing-2) 0;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    box-shadow: var(--shadow-sm);
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+}
+
+.header__logo {
+    width: 50px;
+    height: auto;
+}
+
+.header__title {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* === NAVIGATION === */
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-3);
+    padding: 0;
+    margin: 0;
+}
+
+.nav__link {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-2);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-base);
+}
+
+.nav__link:hover,
+.nav__link--active {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+}
+
+/* === MAIN CONTENT === */
+.main {
+    min-height: calc(100vh - 200px);
+    padding: var(--spacing-4) 0;
+}
+
+/* === HERO SECTION === */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-text-white);
+    padding: var(--spacing-6) 0;
+    margin-bottom: var(--spacing-6);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+}
+
+.hero__image-wrapper {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-3);
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__content {
+    text-align: center;
+    padding: var(--spacing-4);
+}
+
+.hero__title {
+    color: var(--color-text-white);
+    margin-bottom: var(--spacing-2);
+}
+
+.hero__text {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-100);
+    margin-bottom: var(--spacing-4);
+}
+
+/* === SECTIONS === */
+.section {
+    margin-bottom: var(--spacing-6);
+}
+
+.section__title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-3);
+    color: var(--color-dark);
+}
+
+.section__title--center {
+    text-align: center;
+}
+
+.section__text {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-3);
+}
+
+/* === PAGE HEADER === */
+.page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+    padding: var(--spacing-4) 0;
+}
+
+.page-header__title {
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.page-header__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-gray-300);
+    padding: var(--spacing-4) 0;
+    margin-top: var(--spacing-8);
+    text-align: center;
+}
+
+.footer__text {
+    margin-bottom: var(--spacing-1);
+    color: var(--color-gray-400);
+}
+
+/* === CONTACT INFO === */
+.contact-info {
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-4);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-info__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-3);
+    color: var(--color-primary);
+}
+
+.contact-info__item {
+    margin-bottom: var(--spacing-2);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-1);
+}
+
+.contact-info__address {
+    font-style: normal;
+}
+
+/* === SOCIAL LINKS === */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+}
+
+.social-links__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    padding: var(--spacing-2) var(--spacing-3);
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    border-radius: var(--border-radius-md);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-base);
+}
+
+.social-links__item:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-links__icon {
+    font-size: var(--font-size-xl);
+}
